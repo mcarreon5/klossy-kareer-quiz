@@ -1,60 +1,281 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>title</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+<html lang="en">
 
-  <body>
-<form method="POST">
-  <!--Enter Age <input type= "text" name= "ageofuser" placeholder="Your Age"><br>-->
-  <!--What type of work experience are you looking for? <br>-->
-  <!--<input type="radio" name="type_of_job" value="Job">Jobs<br>-->
-  <!--<input type="radio" name="type_of_job" value="Internship ">Internships <br>-->
-  <!--<input type="radio" name="type_of_job" value="Volunteer">Volunteer Opportunities<br>-->
-  
-  <h1> Career Quiz</h1>
-<h2>Select your favorite subject in school</h2>
-  <select name="question1">
-    <option value="math">Math</option>
-    <option value="science">Science</option>
-    <option value="history">History</option>
-    <option value="art">Art</option>
-    <option value="english">English</option>
-  </select><br>
-<h2>What level of education do you plan on pursuing?</h2>
-<select name="question2">
-    <option value="bachelors">Bachelors</option>
-    <option value="PHD/doctorate">PHD/Doctorate</option>
-    <option value="vocational">Vocational School</option>
-  </select><br>
-<h2>What personality type are you?</h2>
-<select name="question3">
-    <option value="extrovert">Extrovert</option>
-    <option value="introvert">Introvert</option>
-    <option value="ambivert">Ambivert</option>
-  </select><br>
-<h2>Are you more of a team leader or team member?</h2>
-  <select name="question4">
-    <option value="leader">Leader</option>
-    <option value="member">Member</option>
-  </select><br>
-<h2>What are your interests?</h2>
-  <select name="question5">
-    <option value="traveling">Traveling</option>
-    <option value="building">Brainstorming and building projects</option>
-    <option value="food">Culinary Arts/Food</option>
-    <option value="discovering">Learning and discovering new theories/facts</option>
-    <option value="helping">Community Service/Helping others</option>
-  </select><br><br>
- <input type = "submit" style="width:90px; height:40px; font-size: 20px;">
-  
-</form>
+<head>
 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <title>Career Personality Quiz</title>
 
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-  </body>
+    <!-- Plugin CSS -->
+    <link href="css/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/color.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Personality Career Quiz</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">Welcome to the KWK Personality Career Quiz</h1>
+                <hr>
+                <p>Our Goal: Finding a career that fits you, one characteristic at a time. Made by a group of three Kode with Klossy scholars <3.</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Helping you discover your dream job</h2>
+                    <hr class="light">
+                    <p class="text-faded">In today's world, there are so many different career possiblities. There's a job for everything and anything.Take our quiz to find out what the perfect job is for you. </p>
+                    <a href="quiz.erb" class="page-scroll btn btn-default btn-xl sr-button">Take Our Quiz</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Customized for You</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+                        <h3>Based on You</h3>
+                        <p class="text-muted">Our app takes your responses to calculate the perfect job for you.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                        <h3>Global Careers</h3>
+                        <p class="text-muted">We choose from a variety of unique, universal careers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+                        <h3>Modern Day Results</h3>
+                        <p class="text-muted">Our job selections consist of careers that are growing as technology progresses, and regularly updates the info on career overviews.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+                        <h3>Finding a Career That You Love</h3>
+                        <p class="text-muted">"The only way to do great work is to love what you do" <br> -Steve Jobs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter popup-gallery">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/1.jpg" class="portfolio-box">
+                        <img src="img/portfolio/fullsize/1.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Career Type: Technical
+                                </div>
+                                <div class="project-name">
+                                    Mechanical Engineer
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/2.jpg" class="portfolio-box">
+                        <img src="img/portfolio/fullsize/2.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Career Type: Artistic
+                                </div>
+                                <div class="project-name">
+                                    Graphic Designer
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/3.jpg" class="portfolio-box">
+                        <img src="img/portfolio/thumbnails/3.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Career Type: Artistic
+                                </div>
+                                <div class="project-name">
+                                    Photographer
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
+                        <img src="img/portfolio/fullsize/4.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Career Type: Culinary Arts 
+                                </div>
+                                <div class="project-name">
+                                    Chef
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
+                        <img src="img/portfolio/fullsize/5.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Career Type: Academia
+                                </div>
+                                <div class="project-name">
+                                    Researcher
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
+                        <img src="img/portfolio/fullsize/6.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Career Type: Mechanical
+                                </div>
+                                <div class="project-name">
+                                    Handyman
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--<aside class="bg-dark">-->
+    <!--    <div class="container text-center">-->
+    <!--        <div class="call-to-action">-->
+    <!--            <h2>Free Download at Start Bootstrap!</h2>-->
+    <!--            <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Download Now!</a>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</aside>-->
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">About Us <3</h2>
+                    <hr class="primary">
+                    <p>This app was created by three <a href= "https://www.kodewithklossy.com/">Kode with Klossy</a> students.......................................</p>
+            <!--    </div>-->
+            <!--    <div class="col-lg-4 col-lg-offset-2 text-center">-->
+            <!--        <i class="fa fa-phone fa-3x sr-contact"></i>-->
+            <!--        <p>123-456-6789</p>-->
+            <!--    </div>-->
+            <!--    <div class="col-lg-4 text-center">-->
+            <!--        <i class="fa fa-envelope-o fa-3x sr-contact"></i>-->
+            <!--        <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>-->
+            <!--    </div>-->
+            <!--</div>-->
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/creative.min.js"></script>
+
+</body>
+
 </html>

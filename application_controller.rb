@@ -7,7 +7,11 @@ class MyApp < Sinatra::Base
     erb :index
   end
   
-   post '/' do
+  get '/quiz' do
+    erb :quiz.erb
+  end 
+  
+   post '/results' do
      
    
     this_career = Career.new(params)
@@ -20,7 +24,7 @@ class MyApp < Sinatra::Base
     
     @answer = this_career.final_results
     @result_pic = this_career.get_results(@answer)
-    
+    # @result_desc = 
     erb :results
   end 
 
